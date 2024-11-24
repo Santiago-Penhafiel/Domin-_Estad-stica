@@ -42,3 +42,17 @@ probabilidadB = numEventoB/numTotal
 print("La proabilidad de que una ficha tenga sus puntos mayor a 5 es de ", "%.2f"%(probabilidadA*100), "%", sep="")
 
 print("La probabilidad de que la suma de puntos sea múltiplo de 2 es de " ,"%.2f"%(probabilidadB*100), "%", sep="")
+
+eventoC=[]
+
+
+for A in eventoA:
+    for B in eventoB:
+        if A == B:
+            eventoC.append(A)
+
+probabilidadC = len(eventoC)/numTotal
+
+probabilidadEjercicio = probabilidadA + probabilidadB - probabilidadC
+
+print("La probabilidad de que una ficha de dominó sea mayor a 5 como que sea múltiplo de 3 es de ", "%.2f"%(probabilidadEjercicio*100), "%", sep="")
